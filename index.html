@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untuk Cintakuuuu ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease;
+    }
+    h1 { color: #ff5f7e; }
+    .memory {
+      width: 100%;
+      border-radius: 15px;
+      margin: 15px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      display: none;
+    }
+    .memory.active {
+      display: block;
+    }
+    .slider-btn {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .slider-btn button {
+      padding: 6px 14px;
+      font-size: 14px;
+    }
+    .caption {
+      font-size: 14px;
+      color: #777;
+    }
+    button {
+      background: #ff5f7e;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff2f60;
+      transform: scale(1.05);
+    }
+    .hidden { display: none; margin-top: 15px; font-size: 16px; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: fall 4s linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hai Sayangkkuuu 💕</h1>
+    <p>Aku bikin website kecil ini khusus buat kamu.</p>
+    <div class="slider">
+      <img src="foto1.jpg" class="memory active" />
+      <img src="foto2.jpg" class="memory" />
+      <img src="foto3.jpg" class="memory" />
+    </div>
+    <div class="slider-btn">
+      <button onclick="prevSlide()">◀</button>
+      <button onclick="nextSlide()">▶</button>
+    </div>
+    <p class="caption">Kenangan kecil yang berarti besar 🤍</p>
+    <button onclick="showMessage()">Klik Aku</button>
+    <div id="message" class="hidden">
+      <p>Terima kasih sudah hadir di hidupku 🥰</p>
+      <p>sayangkuuu itu cantikk tauuu ❤️</p>
+    </div>
+    <button onclick="playMusic()">Putar Musik 🎵</button>
+    <audio id="music" loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+  </div>  <script>
+    function showMessage() {
+      document.getElementById('message').classList.toggle('hidden');
+    }
+
+    function playMusic() {
+      const music = document.getElementById('music');
+      music.paused ? music.play() : music.pause();
+    }
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerText = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
+    }
+
+    setInterval(createHeart, 500);
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.memory');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+</script></body>
+</html>

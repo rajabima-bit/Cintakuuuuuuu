@@ -26,9 +26,9 @@
     }
     h1 { color: #ff5f7e; }
     .memory {
-      width: 100%;
+      width: 85%;
       border-radius: 20px;
-      margin: 20px 0;
+      margin: 20px auto;
       display: none;
       border: 8px solid #ffd6e8;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -51,6 +51,17 @@
     }
     .memory.active {
       display: block;
+    }
+    .surprise-btn {
+      background: #ff8fab;
+      margin-top: 20px;
+    }
+    .surprise-message {
+      display: none;
+      margin-top: 20px;
+      fron-size: 18px;
+      color: #ff5f7e;
+      animation: fadein is ease;
     }
     .slider-btn {
       display: flex;
@@ -110,6 +121,11 @@
       <button onclick="nextSlide()">▶</button>
     </div>
     <p class="caption">Horee benarr kuda lumpingg🤍</p>
+    <button class="surprise-btn" onclick="showsurprise()">>🎁 Tombol Kejutan</button>
+    <div id="surprise" class="surprise-message">
+     sayangku bukan sekedar pasangan,tapi juga myhoney bany sweety form akuu 🤍<br>
+      Terima kasih sudah selalu ada 🥹❤️
+    </div>
     <button onclick="showMessage()">Klik Aku</button>
     <div id="message" class="hidden">
       <p>Sayangkuu jangan sedih lagi yaa🥰</p>

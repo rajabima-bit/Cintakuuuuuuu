@@ -62,7 +62,7 @@
       margin-top: 20px;
       fron-size: 18px;
       color: #ff5f7e;
-      animation: fadeIn is ease forwards;
+      animation: fadeIn 1s ease forwards;
     }
     .slider-btn {
       display: flex;
@@ -122,7 +122,7 @@
       <button onclick="nextSlide()">▶</button>
     </div>
     <p class="caption">Horee benarr kuda lumpingg🤍</p>
-    <button class="surprise-btn" onclick="showsurprise()">🎁 Tombol Kejutan</button>
+    <button class="surprise-btn" onclick="showSurprise()">🎁 Tombol Kejutan</button>
     <div id="surprise" class="surprise-message">
       sayangku bukan sekedar pasangan,tapi juga myhoney bany sweety form akuu 🤍<br>
       Terima kasih sudah selalu ada 🥹❤️
@@ -175,7 +175,7 @@
       showSlide(currentSlide);
     }
   function showSurprise() {
-      document.getElemenById('surprise').style.display = 'block';
+      document.getElementById('surprise').style.display = 'block';
     }
 
 </script>

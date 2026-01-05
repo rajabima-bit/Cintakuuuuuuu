@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Untuk Cintakuuuu ❤️</title>
+  <title>Untuk Cintakuuuu❤️</title>
   <style>
     body {
       margin: 0;
@@ -27,10 +27,27 @@
     h1 { color: #ff5f7e; }
     .memory {
       width: 100%;
-      border-radius: 15px;
-      margin: 15px 0;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      border-radius: 20px;
+      margin: 20px 0;
       display: none;
+      border: 8px solid #ffd6e8;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      background: white;
+      position: relative;
+    }
+    .memory::before {
+      content: "🧸✨";
+      position: absolute;
+      top: -18px;
+      left: 15px;
+      font-size: 22px;
+    }
+    .memory::after {
+      content: "🎀🧸";
+      position: absolute;
+      bottom: -18px;
+      right: 15px;
+      font-size: 22px;
     }
     .memory.active {
       display: block;
@@ -81,8 +98,8 @@
 </head>
 <body>
   <div class="card">
-    <h1>Hai Sayangkkuuu 💕</h1>
-    <p>Aku bikin website kecil ini khusus buat kamu.</p>
+    <h1>Alooo Sayangkuu💕</h1>
+    <p>Kuda,kuda apa yang berisik???.</p>
     <div class="slider">
       <img src="foto1.jpg" class="memory active" />
       <img src="foto2.jpg" class="memory" />
@@ -92,15 +109,15 @@
       <button onclick="prevSlide()">◀</button>
       <button onclick="nextSlide()">▶</button>
     </div>
-    <p class="caption">Kenangan kecil yang berarti besar 🤍</p>
+    <p class="caption">Horee benarr kuda lumpingg🤍</p>
     <button onclick="showMessage()">Klik Aku</button>
     <div id="message" class="hidden">
-      <p>Terima kasih sudah hadir di hidupku 🥰</p>
-      <p>sayangkuuu itu cantikk tauuu ❤️</p>
+      <p>Sayangkuu jangan sedih lagi yaa🥰</p>
+      <p>Kan adaa akuu disinii ❤️</p>
     </div>
     <button onclick="playMusic()">Putar Musik 🎵</button>
     <audio id="music" loop>
-      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      <source src="lagu.mp3" type="audio/mpeg">
     </audio>
   </div>  <script>
     function showMessage() {
